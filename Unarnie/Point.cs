@@ -70,5 +70,18 @@ namespace Unarnie
             return p.X == 0 || p.Y == 0 ? true : false;
         }
 
+        public static Point operator |(Point p1,Point p2)
+        {
+            if ((p1.X != 0 || p1.Y != 0) || (p2.X != 0 || p2.Y != 0))
+                return p2;
+            return new Point();
+        }
+
+        public static Point operator &(Point p1, Point p2)
+        {
+            if ((p1.X != 0 && p1.Y != 0) && (p2.X != 0 && p2.Y != 0))
+                return p2;
+            return new Point();
+        }
     }
 }

@@ -82,6 +82,7 @@ namespace Unarnie
             if ((p1.X != 0 && p1.Y != 0) && (p2.X != 0 && p2.Y != 0))
                 return p2;
             return new Point();
+
         }
     }
 }
